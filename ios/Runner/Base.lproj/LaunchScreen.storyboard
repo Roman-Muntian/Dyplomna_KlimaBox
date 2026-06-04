@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  ios/Runner/Base.lproj/LaunchScreen.storyboard
+
+  Splash екран для iOS. Відображається до першого Flutter-кадру.
+  Фон #F4F4F4 (NB.paperLight) збігається з Flutter SplashScreen — немає мигання.
+
+  Структура:
+  - LaunchImage  — логотип, 42% ширини екрана, трохи вище центру
+  - label-title  — назва "KlimaBox", 20pt
+  - label-sub    — підзаголовок "REALTIME TELEMETRY", 11pt сірий
+-->
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB"
+          version="3.0"
+          toolsVersion="21701"
+          systemVersion="22G72"
+          targetRuntime="iOS.CocoaTouch"
+          propertyAccessControl="none"
+          useAutolayout="YES"
+          launchScreen="YES"
+          colorMatched="YES"
+          initialViewController="01J-lp-oVM">
+
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+
+    <scenes>
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top"    id="Ydg-fD-yQy"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbc-2k-c8Z"/>
+                    </layoutGuides>
+
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+
+                        <subviews>
+
+                            <!-- Логотип -->
+                            <imageView
+                                clipsSubviews="YES"
+                                opaque="NO"
+                                multipleTouchEnabled="YES"
+                                contentMode="scaleAspectFit"
+                                image="LaunchImage"
+                                translatesAutoresizingMaskIntoConstraints="NO"
+                                id="YRO-k0-Ey4"/>
+
+                            <!-- Назва додатка -->
+                            <label
+                                opaque="NO"
+                                userInteractionEnabled="NO"
+                                contentMode="left"
+                                horizontalHuggingPriority="251"
+                                verticalHuggingPriority="251"
+                                text="KlimaBox"
+                                textAlignment="center"
+                                lineBreakMode="middleTruncation"
+                                baselineAdjustment="alignBaselines"
+                                adjustsFontSizeToFit="NO"
+                                translatesAutoresizingMaskIntoConstraints="NO"
+                                id="label-title">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor"
+                                       red="0.0" green="0.0" blue="0.0" alpha="1"
+                                       colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+
+                            <!-- Підзаголовок -->
+                            <label
+                                opaque="NO"
+                                userInteractionEnabled="NO"
+                                contentMode="left"
+                                horizontalHuggingPriority="251"
+                                verticalHuggingPriority="251"
+                                text="REALTIME TELEMETRY"
+                                textAlignment="center"
+                                lineBreakMode="middleTruncation"
+                                baselineAdjustment="alignBaselines"
+                                adjustsFontSizeToFit="NO"
+                                translatesAutoresizingMaskIntoConstraints="NO"
+                                id="label-sub">
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor"
+                                       red="0.431" green="0.431" blue="0.431" alpha="1"
+                                       colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+
+                        </subviews>
+
+                        <!-- Фон: #F4F4F4 = NB.paperLight -->
+                        <color key="backgroundColor"
+                               red="0.957" green="0.957" blue="0.957" alpha="1"
+                               colorSpace="custom" customColorSpace="sRGB"/>
+
+                        <constraints>
+                            <!-- Логотип: горизонтальний центр -->
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="centerX"
+                                        secondItem="Ze5-6b-2t3" secondAttribute="centerX"
+                                        id="cx-logo"/>
+                            <!-- Логотип: вертикальний центр - 60pt -->
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="centerY"
+                                        secondItem="Ze5-6b-2t3" secondAttribute="centerY"
+                                        constant="-60" id="cy-logo"/>
+                            <!-- Логотип: ширина 42% екрана -->
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="width"
+                                        secondItem="Ze5-6b-2t3" secondAttribute="width"
+                                        multiplier="0.42" id="w-logo"/>
+                            <!-- Логотип: квадратний (висота = ширина) -->
+                            <constraint firstItem="YRO-k0-Ey4" firstAttribute="height"
+                                        secondItem="YRO-k0-Ey4" secondAttribute="width"
+                                        id="h-logo"/>
+
+                            <!-- Назва: 20pt під логотипом, по центру -->
+                            <constraint firstItem="label-title" firstAttribute="top"
+                                        secondItem="YRO-k0-Ey4" secondAttribute="bottom"
+                                        constant="20" id="top-title"/>
+                            <constraint firstItem="label-title" firstAttribute="centerX"
+                                        secondItem="Ze5-6b-2t3" secondAttribute="centerX"
+                                        id="cx-title"/>
+
+                            <!-- Підзаголовок: 6pt під назвою, по центру -->
+                            <constraint firstItem="label-sub" firstAttribute="top"
+                                        secondItem="label-title" secondAttribute="bottom"
+                                        constant="6" id="top-sub"/>
+                            <constraint firstItem="label-sub" firstAttribute="centerX"
+                                        secondItem="Ze5-6b-2t3" secondAttribute="centerX"
+                                        id="cx-sub"/>
+                        </constraints>
+
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+
+                <placeholder placeholderIdentifier="IBFirstResponder"
+                             id="iYj-Kq-Ea1"
+                             userLabel="First Responder"
+                             sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+
+    <resources>
+        <image name="LaunchImage" width="168" height="185"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

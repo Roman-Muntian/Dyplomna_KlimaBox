@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  android/app/src/main/res/values/colors.xml
+-->
+<resources>
+    <!-- Фон adaptive icon (mipmap-anydpi-v26) -->
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <!-- Splash screen: light / dark -->
+    <color name="splash_background">#F4F4F4</color>
+    <color name="splash_background_dark">#0A0A0A</color>
+</resources>

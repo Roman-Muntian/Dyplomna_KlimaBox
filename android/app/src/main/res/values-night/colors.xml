@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  android/app/src/main/res/values-night/colors.xml
+
+  Кольори для dark mode. Застосовуються автоматично при темній темі пристрою.
+-->
+<resources>
+    <color name="splash_background">#0A0A0A</color>
+    <color name="splash_background_dark">#0A0A0A</color>
+</resources>

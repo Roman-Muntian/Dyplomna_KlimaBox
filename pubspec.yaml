@@ -1,0 +1,76 @@
+name: klimabox
+description: "KlimaBox — моніторинг температури і вологості через MQTT"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.1.4
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # MQTT
+  mqtt_client: ^10.2.0
+
+  # БД і зберігання
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  shared_preferences: ^2.2.2
+
+  # Локалізація
+  intl: ^0.20.2
+
+  # UI
+  lucide_icons_flutter: ^3.1.0
+  fl_chart: ^0.70.2
+  cupertino_icons: ^1.0.8
+
+  # Сповіщення
+  flutter_local_notifications: ^17.0.0
+
+  # Експорт CSV
+  csv: ^6.0.0
+  path_provider: ^2.1.2
+  share_plus: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+# ── Іконки додатка ───────────────────────────────────────────────────
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icons/icon_foreground.png"
+
+# ── Flutter ресурси ──────────────────────────────────────────────────
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/icon.png
+    - assets/icons/icon_splash.png
+    - assets/icons/icon_foreground.png
+
+  fonts:
+    - family: Unbounded
+      fonts:
+        - asset: assets/fonts/Unbounded-Bold.ttf
+          weight: 700
+
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-VariableFont_wght.ttf
+
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-VariableFont_wght.ttf

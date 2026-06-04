@@ -1,0 +1,65 @@
+# =====================================================================
+#  .gitignore — KlimaBox Flutter Project
+# =====================================================================
+
+# ── Flutter / Dart / Pub ─────────────────────────────────────────────
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# ── Android ──────────────────────────────────────────────────────────
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+/android/local.properties
+/android/key.properties
+
+# ── iOS ──────────────────────────────────────────────────────────────
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Runner/GeneratedPluginRegistrant.*
+
+# ── IDE ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# ── Credentials та секрети ───────────────────────────────────────────
+# MQTT паролі, API ключі — не комітити в репозиторій
+.env
+.env.*
+*.env
+credentials.json
+*.pem
+*.key
+*.keystore
+*.jks
+google-services.json
+GoogleService-Info.plist
+
+# ── Система ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+*.class
+*.pyc
+*.swp
+.history
+.svn/
+.atom/
+migrate_working_dir/
+
+# ── Символізація та обфускація ───────────────────────────────────────
+app.*.symbols
+app.*.map.json
